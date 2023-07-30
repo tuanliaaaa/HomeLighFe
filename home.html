@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div class="header__navbar">
+        <div class="navbar__logo">
+          <a href="#">
+            <img src="./60.png" alt="" />
+          </a>
+        </div>
+        <div class="navbar__search">
+          <div id="search__product">
+            <input type="text" placeholder="Tìm đèn từ Homelight" />
+            <div class="search__icon">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+        <div class="navbar__contactnumber">
+          <div class="contactnumber___logo">
+            <i class="far fa-phone"></i>
+          </div>
+          <div class="contactnumber__content">
+            <span>HOTLINE HỖ TRỢ</span>
+            <b>086.999.5698</b>
+          </div>
+        </div>
+        <div class="navbar__cart">
+          <a href="#">
+            <div class="cart__logo">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="cart__content">
+              <p>Giỏ Hàng</p>
+            </div>
+            <div class="cart__number">
+              <b>0</b>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="header__menu">
+        <div class="menu__content">
+          <div id="contentmenuCategory">
+            <ul>
+              <li>
+                <a href="#">TRANG CHỦ</a>
+              </li>
+              <li>
+                <a href="#">ĐÈN CHÙM</a>
+                <div class="category__children">
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-solid fa-caret-right"></i> Đèn thả phòng
+                        khách</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class="fa-solid fa-caret-right"></i>Đèn thả phòng
+                        khách</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class="fa-solid fa-caret-right"></i>Đèn thả phòng
+                        khách</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class="fa-solid fa-caret-right"></i> Đèn thả phòng
+                        khách</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class="fa-solid fa-caret-right"></i> Đèn thả phòng
+                        khách</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class="fa-solid fa-caret-right"></i> Đèn thả phòng
+                        khách</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class="fa-solid fa-caret-right"></i> Đèn thả phòng
+                        khách</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class="fa-solid fa-caret-right"></i> Đèn thả phòng
+                        khách</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">ĐÈN THẢ</a>
+              </li>
+              <li>
+                <a href="">ĐÈN MÂM ỐP TRẦM</a>
+              </li>
+              <li>
+                <a href="">ĐÈN GƯƠNG</a>
+              </li>
+              <li>
+                <a href="">ĐÈN BÀN - ĐÈN CẦY</a>
+              </li>
+              <li>
+                <a href="">ĐÈN TƯỜNG</a>
+              </li>
+              <li>
+                <a href="">QUẠT TRẦN</a>
+              </li>
+              <li>
+                <a href="">ĐÈN LED</a>
+              </li>
+              <li>
+                <a href="">ĐÈN NGOÀI TRỜI</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="container__slider">
+        <div id="slider__image">
+          <div class="slider__detailimage">
+            <a href="">
+              <img src="./g114.png" alt="" />
+            </a>
+          </div>
+          <div class="slider__detailimage">
+            <a href="">
+              <img src="./g117.jpg" alt="" />
+            </a>
+          </div>
+          <div class="slider__detailimage">
+            <a href="">
+              <img src="./g118.jpg" alt="" />
+            </a>
+          </div>
+          <div class="slider__detailimage">
+            <a href="">
+              <img src="./g119.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="slider__click">
+          <div id="slider__clickchange">
+            <div class="slider__clickDetail active">
+              <span></span>
+            </div>
+            <div class="slider__clickDetail">
+              <span></span>
+            </div>
+            <div class="slider__clickDetail">
+              <span></span>
+            </div>
+            <div class="slider__clickDetail">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    //--------------------header__menu trượt fixed------------------------------
+    document.addEventListener("DOMContentLoaded", function () {
+      const menu = document.querySelector("#header .header__menu");
+      const navbar = document.querySelector("#header .header__navbar");
+
+      // Lấy vị trí của thanh menu từ phía trên thanh navbar
+      const menuTopOffset = navbar.offsetTop + navbar.offsetHeight;
+
+      // Xử lý sự kiện scroll
+      function handleScroll() {
+        const scrollY = window.scrollY;
+
+        // Nếu cuộn chuột đến vị trí của thanh menu
+        if (scrollY >= menuTopOffset) {
+          menu.classList.add("fixed");
+        } else {
+          menu.classList.remove("fixed");
+        }
+      }
+
+      // Thêm sự kiện scroll cho cửa sổ
+      window.addEventListener("scroll", handleScroll);
+    });
+    //--------------------------------------------Slider trượt
+    var sliderIndex = 0;
+    var sliderIndexMax = 3;
+    function selectedImageSlider() {
+      var sliderSelected = document.getElementById("slider__image");
+      sliderSelected.style.transform =
+        "translate3d(-" + 1263 * sliderIndex + "px, 0px, 0px)";
+    }
+
+    var elementClickChangeSliders = document.querySelectorAll(
+      "#slider__clickchange .slider__clickDetail"
+    );
+    for (var i = 0; i < elementClickChangeSliders.length; i++) {
+      elementClickChangeSliders[i].addEventListener("click", (event) => {
+        const index = Array.from(elementClickChangeSliders).indexOf(
+          event.target
+        );
+        elementClickChangeSliders[sliderIndex].classList.remove("active");
+        sliderIndex = index;
+        elementClickChangeSliders[sliderIndex].classList.add("active");
+        selectedImageSlider();
+      });
+    }
+    setInterval(function () {
+      if (sliderIndex == sliderIndexMax) {
+        elementClickChangeSliders[sliderIndex].classList.remove("active");
+        sliderIndex = 0;
+        elementClickChangeSliders[sliderIndex].classList.add("active");
+      } else {
+        elementClickChangeSliders[sliderIndex].classList.remove("active");
+        sliderIndex++;
+        elementClickChangeSliders[sliderIndex].classList.add("active");
+      }
+      selectedImageSlider();
+    }, 2000);
+  </script>
+</html>
