@@ -492,6 +492,7 @@ body {
 }
 .footerContent__infor .infor__title{
 
+
 }
 .infor__title strong{
     line-height: 30px;
@@ -516,8 +517,21 @@ body {
 .footerContent__infor .infor__contact{
     width: 33%;
 }
+.footerContent__infor .infor__about{
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+.infor__about .aboutCompany{
+  
+}
+.footerContent__infor .infor__supportBuy{
+  width: 33%;
+  display: flex;
+  justify-content:flex-end;
+}
 .footerContent__infor .infor__content{
-   
+   display: flex;
 
 }
 .infor__content ul{
